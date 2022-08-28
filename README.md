@@ -195,6 +195,8 @@ Note that this device must be running Android 12 (Api Level 31+). Older devices 
     ...
     ```
 
+    See [tombstone.txt](tombstone.txt) for the full tombstone file generated.
+
 7. If you don't see method names next to `libavcodec.so` then use `ndk-stack` to see the contents of the tombstone file.
     ```
     $ANDROID_NDK_ROOT/ndk-stack -sym build/ffmpeg/lib -i tombstone_30
