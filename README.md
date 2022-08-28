@@ -133,8 +133,9 @@ Note that this device must be running Android 12 (Api Level 31+). Older devices 
     export LD_LIBRARY_PATH=/data/local/tmp/org.ffmpeg.test
     ./ffmpeg -v 9 -loglevel 99 -loop 1 -i pyramid.jpg -vf scale=792x1568 -c:v libx264 video.mp4
     ```
-    Full console output can be found inside the [console-output.txt ](console-output.txt) file.
+    Full console output can be found inside the [console-output.txt](console-output.txt) file.
 
+    Disassembly information captured via `gdb` is available inside [disassembly.txt](disassembly.txt).
 
 4. This command crashes with `Segmentation fault` on Android 12 arm64 devices.
 
