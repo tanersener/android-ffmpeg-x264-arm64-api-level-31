@@ -17,8 +17,10 @@ export RANLIB=${ANDROID_NDK_ROOT}/toolchains/llvm/prebuilt/${TOOLCHAIN}/bin/llvm
 export STRIP=${ANDROID_NDK_ROOT}/toolchains/llvm/prebuilt/${TOOLCHAIN}/bin/llvm-strip
 
 rm -rf x264
-git clone https://github.com/mirror/x264
+git clone https://code.videolan.org/videolan/x264.git
 cd x264
+git fetch "https://code.videolan.org/BugMaster/x264.git" 'fix_mbtree_overread'
+git checkout -b 'x264-fix_mbtree_overread' FETCH_HEAD
 
 ./configure \
  --prefix=${BASEDIR}/build/x264 \
